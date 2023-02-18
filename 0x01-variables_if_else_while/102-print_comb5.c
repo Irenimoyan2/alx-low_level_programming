@@ -8,13 +8,17 @@
 int main(void)
 {
         int  x, y, z, w, aux;
+
         for (x = '0'; x <= '9'; x++)
         {
+
                 for (y = '0' ; y <= '9'; y++)
                 {
+
                         for (z = x ; z <= '9'; z++)
                         {
-                                if (z == x)
+                        
+				if (z == x)
                                 {
                                         aux = y + 1;
                                 }
@@ -38,6 +42,8 @@ int main(void)
                         }
                 }
         }
+
         putchar('\n');
+
         return (0);
 }
