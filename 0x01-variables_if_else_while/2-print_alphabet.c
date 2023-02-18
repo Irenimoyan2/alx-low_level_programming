@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Return: always 0 (Success)
+ * main - print lowercase a-z
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char alpha = "a";
+	char alpha = 'a';
 
 	while (alpha <= 'z')
 	{
