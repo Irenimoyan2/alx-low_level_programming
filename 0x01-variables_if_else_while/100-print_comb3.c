@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - Entry point, print 00 to 89 using putchar
+ *main - Entry point, print 00 to 99 using putchar
  *Return: Always 0 (Success)
  */
 
