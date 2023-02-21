@@ -1,8 +1,8 @@
-#include "Alx.h"
+#include "main.h"
 
 /**
  * main - print Alx, followed by new line
- * Return: 0
+ * Return: Always  0 (Success)
  */
 
 int main(void)
