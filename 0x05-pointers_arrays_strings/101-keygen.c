@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - check the code for Holberton School students.
+ * main - program that generates random valid passwords for the program 101-crackme
  *
  * Return: Always 0.
  */
