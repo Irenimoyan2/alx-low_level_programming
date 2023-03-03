@@ -1,52 +1,68 @@
 #include "main.h"
+
 /**
- * infinite_add - prints the add of two numbers
- * @n1: input string value 1
- * @n2: input string value 2
- * @r:buffer
- * @size_r: size of buffer
- * Return: number
+ * _strlen - returns the length of a string
+ * @s: the string whose length to check
+ *
+ * Return: integer length of string
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s++)
+		i++;
+	return (i);
+}
+
+/**
+ * rev_string - reverses a string
+ * @s: the string to reverse
+ *
+ * Return: void
+ */
+char *rev_string(char *s)
+{
+	int l = _strlen(s), i = 0;
+	char t;
+
+	for (i = 0; i < l / 2; i++)
+	{
+		t = s[l - i - 1];
+		s[l - i - 1] = s[i];
+		s[i] = t;
+	}
+	return (s);
+}
+
+/**
+ * infinite_add - adds arbitrarily long string of digits
+ * @n1: the first digit string
+ * @n2: the second digital string
+ * @r: the result buffer
+ * @size_r: the size of result buffer
+ *
+ * Return: char pointer to buffer
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int cont1 = 0, cont2 = 0, grande, c = 0;
-	int sum, aux, val1, val2;
+	int l1 = _strlen(n1), l2 = _strlen(n2), i = 0, a, b, c = 0;
 
-	while (*(n1 + cont1) != '\0')
-		cont1++;
-	while (*(n2 + cont2) != '\0')
-		cont2++;
-	if (cont1 > cont2)
-		grande = cont1;
-	else
-		grande = cont2;
-	r[grande + 1] = '\0';
-	aux = grande;
-	while (grande >= 0)
+	for (l1--, l2--, size_r--; l1 >= 0 || l2 >= 0 || c; l1--, l2--, i++)
 	{
-		if (cont1 > 0)
-			val1 = (n1[cont1 - 1]) - '0';
-		else
-			val1 = 0;
-		if (cont2 > 0)
-			val2 = (n2[cont2 - 1]) - '0';
-		else
-			val2 = 0;
-		sum = (val1 + val2 + c) % 10;
-		c = (val1 + val2 + c) / 10;
-		r[grande] = sum + '0';
-		grande--;
-		cont1--;
-		cont2--;
+		if (i >= size_r)
+			return (0);
+		a = 0;
+		b = 0;
+		if (l1 >= 0)
+			a = n1[l1] - '0';
+		if (l2 >= 0)
+			b = n2[l2] - '0';
+		a = a + b + c;
+		c = a / 10;
+		a %= 10;
+		r[i] = a + '0';
 	}
-	if ((size_r - 1) <= aux)
-	{ return (0);
-	}
-	else
-	{
-		if (*(r + 0) == '0')
-			return (r + 1);
-		else
-			return (r);
-	}
+	r[i] = '\0';
+	return (rev_string(r));
 }
