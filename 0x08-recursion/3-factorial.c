@@ -1,11 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * factorial - Entry
  * Description: Write a function that returns the factorial of a given number
  * @n: number  of  factorial
- * Return: Always 0.
+ * Return: Always (Success)
  */
 int factorial(int n)
 {
@@ -13,6 +12,8 @@ int factorial(int n)
 	{
 		return (-1);
 	}
+	else if (n == 1)
+		return (1);
 	else
-		return (n * factorial(n + 1));
+		return (n * factorial(!n + 1));
 }
