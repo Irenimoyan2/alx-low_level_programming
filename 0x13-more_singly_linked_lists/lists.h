@@ -1,6 +1,8 @@
 #ifndef MY_LISTS_H
 #define MY_LISTS_H
 
+#include <stddef.h>
+
 /*
  * Description: Header file for thee More singly linked list project
  * contains functions and prototypes used
