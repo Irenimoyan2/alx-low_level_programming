@@ -5,7 +5,7 @@
 
 /**
  * add_dnodeint - Entry Point
- * Description: function that adds a new node at the beginning of a dlistint_t list
+ * Description: function that adds a new node at the beginning
  * @head: pointer to the first element of the list
  * @n: int to set in the new node.
  * Return: the address of the new element, or NULL if it failed
@@ -16,7 +16,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	dlistint_t *new_node;
 
 	/* Allocate memory for a new node */
-       	new_node = malloc(sizeof(dlistint_t));
+	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 	{
 		return (NULL);
@@ -29,8 +29,8 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	new_node->prev = NULL;
 	new_node->next = *head;
 
-	/* update prev pointer of the old head node if it exists*/
-	if (*head != NULL);
+	/* update prev pointer of the old head node if it exists */
+	if (*head != NULL)
 	{
 		(*head)->prev = new_node;
 	}
