@@ -5,7 +5,7 @@
 
 /**
  * dlistint_len - Entry code
- * Description: function that returns the number of elements in a linked dlistint_t list
+ * Description: function that returns the number of elements
  * @h: pointer to the list.
  * Return: number of nodes.
  */
