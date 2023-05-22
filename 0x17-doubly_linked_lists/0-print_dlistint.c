@@ -1,10 +1,7 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_dlistint- Entry Point
+ * print_dlistint - Entry Point
  * Description: Function that prints all the elements of a dlistint_t list
  * @h: Pointer to the list.
  * Return: number of nodes.
