@@ -1,16 +1,8 @@
-#ifndef MY_LISTS_H
-#define MY_LISTS_H
-
-#include <stddef.h>
-
-/*
- * Description: Header file for the doubly linked list project
- * contains functions and prototypes used
- */
-
+#ifndef LISTS
+#define LISTS
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
-
 
 /**
  * struct dlistint_s - doubly linked list
@@ -19,7 +11,7 @@
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- *
+ * for holberton school
  */
 typedef struct dlistint_s
 {
@@ -39,4 +31,4 @@ int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
-#endif /*LISTS_H*/
+#endif
