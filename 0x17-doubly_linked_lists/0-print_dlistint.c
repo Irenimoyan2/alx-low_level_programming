@@ -19,7 +19,7 @@ size_t print_dlistint(const dlistint_t *h)
 	while (h != NULL)
 	{
 		/* Print the value of the current node */
-		printf("%d\n", h->n);
+		printf("%i\n", h->n);
 		
 		/* Move to the next node */
 		h = h->next;
