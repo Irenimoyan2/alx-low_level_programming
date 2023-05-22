@@ -21,12 +21,12 @@ size_t print_dlistint(const dlistint_t *h)
 		/* Print the value of the current node */
 		printf("%i\n", h->n);
 		
-		/* Move to the next node */
-		h = h->next;
-		
 		/* Increment the counter */
 		count++;
+		
+		/* Move to the next node */
+		h = h->next;
 	}
 	
-	return (count);
+	return count;
 }
