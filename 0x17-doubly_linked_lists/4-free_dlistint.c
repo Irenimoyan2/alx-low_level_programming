@@ -4,7 +4,8 @@
 #include "lists.h"
 
 /**
- * free_dlistint - free list.
+ * free_dlistint - Entry Point
+ * Description: free list.
  * @head: pointer to the list.
  **/
 
